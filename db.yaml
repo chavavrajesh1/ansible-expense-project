@@ -1,4 +1,4 @@
-- name: configur DB Server
+- name: configure DB Server
   hosts: db
   become: yes
   vars:
@@ -16,7 +16,7 @@
         enabled: yes
 
     - name: check DB connection
-      community.mysql.mysql.info:
+      community.mysql.mysql_info:
         login_user: root
         login_password: ExpenseApp@1
         login_host: "{{ login_host }}"
