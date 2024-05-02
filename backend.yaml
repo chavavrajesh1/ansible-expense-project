@@ -20,6 +20,6 @@
         name: expense
 
     - name: create app directory
-      ansible.builtin.user:
+      ansible.builtin.file:
         path: /app
         state: directory
